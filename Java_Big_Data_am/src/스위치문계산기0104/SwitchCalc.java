@@ -1,7 +1,6 @@
-package 스위치문계산기;
+package 스위치문계산기0104;
 import java.util.Scanner;
 // 스위치문으로 계산기 만들기
-// 예제: 자판기 구현해보기 ( 직접 해보자!! )
 public class SwitchCalc {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
