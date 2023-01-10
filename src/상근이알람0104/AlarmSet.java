@@ -30,6 +30,10 @@ public class AlarmSet {
 
         alarmSetHour = realAlarmTime / 60;
         alarmSetMinute = realAlarmTime % 60;
+        if(alarmSetMinute < 0) {
+            alarmSetHour = alarmSetHour + 23;
+            alarmSetMinute = alarmSetMinute + 60;
+        }
 
         System.out.printf("설정된 알람 시간 : %d시 %d분\n", alarmSetHour, alarmSetMinute);
     }
