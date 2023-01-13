@@ -22,7 +22,7 @@ public class ClassMethod {
 
         System.out.println(sample.sayStr()); // return 값을 String 으로 반환하기 때문에 System.out.print 출력 가능
 
-        int rst2 = sample.sum(1,2,3,4,5);
+        int rst2 = sample.sum(1,2,3,4,5,6,7,8,9);
         System.out.println(rst2);
     }
 }
