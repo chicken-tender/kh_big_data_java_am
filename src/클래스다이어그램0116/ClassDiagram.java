@@ -15,18 +15,23 @@ class Circle {
     public final static double PI = 3.14;
     private double radius; // 접근제한자 확인 필요 (-는 private을 의미함)
     public Circle(double radius) { // 생성자 호출시 매개변수가 빌요함.
+
         this.radius = radius;
     }
     public double getRadius() {
+
         return radius;
     }
     public void setRadius(double radius) {
+
         this.radius = radius;
     }
     public static double getPi() {
+
         return PI;
     }
     public void draw() {
+
         System.out.println("반지름이 " + radius + "cm 인 원을 그립니다.");
     }
 }
