@@ -16,7 +16,7 @@ public class Bank {
         return count;
     }
     //   (예금을 위한 메소드) //매개변수가 바뀌면 안될 경우 final로 상수처리.. 최종값으로 전달됨.
-    public void setDeposit(final int dep) { // 입금된 금액의 고객을 더 이상 변경 불가 상태로 만들어 안전하게 보호
+    public void setDeposit(final int dep) { // 입금된 고객의 금액을 더 이상 변경 불가 상태로 만들어 안전하게 보호
         account += dep;
         System.out.println(dep + "원 예금 했습니다.");
     }
@@ -29,6 +29,7 @@ public class Bank {
         }
     }
     public void viewAccount() {
+
         System.out.println("현재 잔액은 " + account + "원 입니다.");
     }
 }
