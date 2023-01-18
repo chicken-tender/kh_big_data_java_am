@@ -42,10 +42,11 @@ public class Password {
     }
 
     public boolean pwOptionSpeChar() {
-        for(int i = 0; i < password.length(); i++) {
-            if(password.charAt(i) == '!' || password.charAt(i) == '%' || password.charAt(i) == '_'
-             || password.charAt(i) == '#' || password.charAt(i) == '&' || password.charAt(i) == '+'
-             || password.charAt(i) == '-' || password.charAt(i) == '*' || password.charAt(i) == '/') return true;
+        String specialLetter = "!%_&#+-*/";
+        for(int i = 0; i < specialLetter.length(); i++) {
+            for(int j = 0; j < password.length(); j++) {
+                if(specialLetter.charAt(i) == password.charAt(j)) return true;
+            }
         }
         return false;
     }
