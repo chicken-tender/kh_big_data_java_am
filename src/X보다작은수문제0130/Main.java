@@ -9,18 +9,16 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         int val;
-        int[] a = new int[2];
         List<Integer> arr = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
-        for(int i = 0; i < 2; i++) {
-            a[i] = sc.nextInt();
-        }
-        for(int i = 0; i < a[0]; i++) {
+        int x = sc.nextInt();
+        int y = sc.nextInt();
+        for(int i = 0; i < x; i++) {
             val = sc.nextInt();
             arr.add(val);
         }
-        for(Integer v : arr) {
-            if(v < a[1]) System.out.print(v + " ");
+        for(int i = 0; i < arr.size(); i++) {
+            if(arr.get(i) < y) System.out.print(arr.get(i) + " ");
         }
     }
 }
