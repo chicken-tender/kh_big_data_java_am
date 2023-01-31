@@ -25,10 +25,10 @@ public class Main {
         int n = sc.nextInt();
         while (true) {
             int val = sc.nextInt();
+            if(val == 0) break;
             mul.add(val); // mul.add(new Integer(val))이 아니고 int 타입을 넣어도 되는 이유는 Wrapper 클래스 덕분!
             // add에 인덱스를 지정하지 않으면 마지막 위치에 저장됨. add(index, element)해서 원하는 위치에 추가도 가능!
-            if(val == 0) break;
-        } mul.remove(mul.size()-1);
+        }
         for(int i = 0; i < mul.size(); i++) {
             if(mul.get(i) % n == 0) System.out.printf("%d is a multiple of %d\n",mul.get(i),n);
             else System.out.printf("%d is NOT a multiple of %d\n",mul.get(i),n);
