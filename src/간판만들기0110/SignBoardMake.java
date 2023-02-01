@@ -20,6 +20,5 @@ public class SignBoardMake {
             }
             if(num.equals("0")) break;
         }
-
     }
 }
