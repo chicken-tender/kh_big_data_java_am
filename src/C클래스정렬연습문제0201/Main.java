@@ -18,6 +18,8 @@ import java.util.TreeSet;
 //   1   안유진   99   202301
 public class Main {
     public static void main(String[] args) {
+        int grade = 0;
+        int preScore = 0;
         TreeSet<Student> ts = new TreeSet<>();
         Scanner sc = new Scanner(System.in);
         System.out.print("학생 수 : ");
@@ -32,10 +34,10 @@ public class Main {
         System.out.println("---------------------------");
         System.out.println("석차    이름    성적    학번");
         System.out.println("---------------------------");
-        int grade = 0;
         for (Student e : ts) {
-            grade++;
+            if(preScore != e.score) grade++;
             System.out.println(" " + grade + "    " + e.name + "     " + e.score + "    " + e.studentNum);
+            preScore = e.score;
         }
     }
 }
