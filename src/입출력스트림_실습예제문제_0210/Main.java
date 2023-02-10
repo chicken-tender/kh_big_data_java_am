@@ -18,21 +18,18 @@ import java.util.TreeSet;
 // 3. 해당 파일을 읽어 총점을 구하고 총점이 높은 사람 순으로 이름과 총점 보여주기 (총점이 같으면 이름순)
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
-        TreeSet<Student> ts = new TreeSet<>();
-        FileInputStream fis = new FileInputStream("src/입출력스트림_실습예제문제_0210/test.txt");
+        TreeSet<Student> hs = new TreeSet<>();
+        FileInputStream fis = new FileInputStream("C:/Dev/PracticeJava/src/입출력스트림문제/score.txt");
         Scanner sc = new Scanner(fis);
-        while(sc.hasNextLine()) {
+        while(sc.hasNext()) {
             String line = sc.nextLine();
             String[] strArr = line.split(" ");
-            int korScore = Integer.parseInt(strArr[1]);
-            int engScore = Integer.parseInt(strArr[2]);
-            int mathScore = Integer.parseInt(strArr[3]);
-            ts.add(new Student(strArr[0],korScore,engScore,mathScore,korScore+mathScore+engScore));
+            hs.add(new Student(strArr[0], Integer.parseInt(strArr[1]), Integer.parseInt(strArr[2]),Integer.parseInt(strArr[3])));
         }
-        for(Student e : ts) {
+        for(Student e : hs) {
             System.out.println("이름 : " + e.getName());
-            System.out.println("총 점수 : " + e.getTotalScore());
-            System.out.println("================================");
+            System.out.println("총점 : " + e.getTotalScore());
+            System.out.println("=============================");
         }
     }
 }
