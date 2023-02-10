@@ -19,7 +19,7 @@ import java.util.TreeSet;
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
         TreeSet<Student> ts = new TreeSet<>();
-        FileInputStream fis = new FileInputStream("test.txt");
+        FileInputStream fis = new FileInputStream("src/입출력스트림_실습예제문제_0210/test.txt");
         Scanner sc = new Scanner(fis);
         while(sc.hasNextLine()) {
             String line = sc.nextLine();
